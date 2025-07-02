@@ -5,6 +5,11 @@ import pluginImport from "eslint-plugin-import";
 import pluginPrettierRecommended from "eslint-plugin-prettier/recommended";
 
 export default [
+  {
+    // This can be the main shared configuration object
+    // Or a new dedicated object just for ignores at the top level of the array
+    ignores: ["node_modules/", "dist/"],
+  },
   js.configs.recommended, // ESLint's recommended rules
   pluginReact.configs.flat.recommended, // React plugin recommended flat config
 
@@ -25,7 +30,6 @@ export default [
           extensions: [".js", ".jsx"],
         },
       },
-      // "import/ignore": [".css$"], // Removed from settings, trying in rule config
     },
   },
 
@@ -49,11 +53,6 @@ export default [
       react: {
         version: "detect",
       },
-      // Global resolver for import plugin - node resolver already configured in its specific block
-      // but good to have a general spot if other resolvers were needed.
-      // 'import/resolver': { node: { extensions: ['.js', '.jsx'] } }, // This is now in the import block
-      // Global ignore for import plugin - also in import block
-      // 'import/ignore': ['.css$'],
     },
     rules: {
       "react/prop-types": "off", // Disable prop-types
