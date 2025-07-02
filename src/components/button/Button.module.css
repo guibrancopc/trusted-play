@@ -1,0 +1,46 @@
+.tpButton {
+  display: inline-block;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #333;
+  background-color: #eee;
+  transition: 200ms;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.tpButton[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.tpButton:hover:not([disabled]) {
+  box-shadow: 3px 3px 6px #aaa;
+  opacity: 0.95;
+}
+
+.tpButton:active {
+  box-shadow: 3px 3px 9px #aaa;
+  opacity: 0.85;
+}
+
+/* Type modifiers - these will be combined with .tpButton in the component */
+.primary {
+  color: #fff;
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+.success {
+  color: #fff;
+  background-color: #198754;
+  border-color: #198754;
+}
+
+.danger {
+  color: #fff;
+  background-color: #dc3545;
+  border-color: #dc3545;
+}

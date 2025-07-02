@@ -1,8 +1,4 @@
-import {
-  getFromLocalStorage,
-  setInLocalStorage,
-  isLocalStorageEmpty,
-} from "./localStorageHandler";
+import { setInLocalStorage, isLocalStorageEmpty } from "./localStorageHandler";
 import { getUid } from "./uidHandler";
 import { postUser } from "./firebaseHandler";
 

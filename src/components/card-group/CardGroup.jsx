@@ -1,14 +1,8 @@
 import React from "react";
+import styles from "./CardGroup.module.css";
 
 export function CardGroup({ children }) {
   return (
-    <>
-      <div className="tp-cards-group">{children}</div>
-      <style jsx>{`
-        .tp-card-group {
-          margin-top: 32px;
-        }
-      `}</style>
-    </>
+    <div className={styles.tpCardGroup}>{children}</div>
   );
 }

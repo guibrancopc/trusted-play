@@ -1,0 +1,61 @@
+/* CSS Variables equivalent (static values used) */
+/* --width: 350px; */
+/* --gutter: 32px; */
+
+.tpDrawer {
+  position: fixed;
+  padding: 32px; /* Replaced var(--gutter) */
+  top: 0;
+  right: 0;
+  width: 350px; /* Replaced var(--width) */
+  height: 100vh;
+  background-color: #fff;
+  z-index: 101;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.1); /* Added a subtle shadow for better separation */
+  transition: transform 0.3s ease-out; /* Added for smooth show/hide */
+  transform: translateX(0);
+}
+
+.tpDrawerHidden {
+  transform: translateX(100%); /* Slide out */
+  /* display: none; */ /* display: none breaks transitions, use transform */
+}
+
+.tpDrawerCloseButton {
+  border: none;
+  background: transparent;
+  padding: 4px 8px;
+  position: absolute;
+  top: calc(32px - 8px); /* Replaced var(--gutter) */
+  right: 15px;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.tpDrawerFooter {
+  width: calc(350px - (2 * 32px)); /* width - 2 * padding */
+  position: absolute;
+  bottom: 32px; /* Adjusted for better spacing, original was 96px which might be too high */
+  left: 32px; /* Align with padding */
+  right: 32px; /* Align with padding */
+}
+
+.tpDrawerOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.5; /* Corrected from 50% which is not a valid opacity value */
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 100;
+  transition: opacity 0.3s ease-out, visibility 0.3s ease-out; /* Added for smooth show/hide */
+  visibility: visible;
+}
+
+.tpDrawerOverlayHidden {
+  opacity: 0;
+  visibility: hidden;
+  /* display: none; */ /* display: none breaks transitions */
+}

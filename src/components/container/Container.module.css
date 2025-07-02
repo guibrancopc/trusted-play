@@ -1,0 +1,4 @@
+.tpContainer { /* Using camelCase for CSS module class names is a common convention */
+  max-width: 1010px;
+  margin: 32px auto;
+}
