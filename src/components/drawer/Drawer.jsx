@@ -2,13 +2,16 @@ import React from "react";
 import styles from "./Drawer.module.css";
 
 export function Drawer({ children, title, footer, isVisible, onClose }) {
-  if (!isVisible) { // Render nothing if not visible to simplify conditional class logic
+  if (!isVisible) {
+    // Render nothing if not visible to simplify conditional class logic
     return null;
   }
 
   return (
     <>
-      <aside className={`${styles.tpDrawer} ${!isVisible ? styles.tpDrawerHidden : ""}`}>
+      <aside
+        className={`${styles.tpDrawer} ${!isVisible ? styles.tpDrawerHidden : ""}`}
+      >
         <button className={styles.tpDrawerCloseButton} onClick={onClose}>
           &times;
         </button>

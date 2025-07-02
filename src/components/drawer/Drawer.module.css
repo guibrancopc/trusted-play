@@ -11,7 +11,7 @@
   height: 100vh;
   background-color: #fff;
   z-index: 101;
-  box-shadow: -2px 0 5px rgba(0,0,0,0.1); /* Added a subtle shadow for better separation */
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); /* Added a subtle shadow for better separation */
   transition: transform 0.3s ease-out; /* Added for smooth show/hide */
   transform: translateX(0);
 }
@@ -50,7 +50,9 @@
   height: 100vh;
   overflow: hidden;
   z-index: 100;
-  transition: opacity 0.3s ease-out, visibility 0.3s ease-out; /* Added for smooth show/hide */
+  transition:
+    opacity 0.3s ease-out,
+    visibility 0.3s ease-out; /* Added for smooth show/hide */
   visibility: visible;
 }
 

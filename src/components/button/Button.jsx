@@ -12,11 +12,7 @@ export function Button({ children, type, onClick, disabled, className }) {
     .join(" ");
 
   return (
-    <button
-      disabled={disabled}
-      className={buttonClasses}
-      onClick={onClick}
-    >
+    <button disabled={disabled} className={buttonClasses} onClick={onClick}>
       {children}
     </button>
   );

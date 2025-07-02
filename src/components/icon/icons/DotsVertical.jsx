@@ -1,6 +1,4 @@
 import React from "react";
-
-import React from "react";
 import styles from "./DotsVertical.module.css";
 
 export function DotsVertical({ className, style }) {

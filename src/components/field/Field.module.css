@@ -2,16 +2,18 @@
   margin-bottom: 16px;
 }
 
-.tpField label { /* Nested selectors are not standard CSS Modules but can be used if PostCSS or similar is configured. For plain CSS Modules, use separate classes or global styles. */
-                 /* Assuming plain CSS modules, this will target a global label if not careful. */
-                 /* Let's make it specific: .label */
+.tpField label {
+  /* Nested selectors are not standard CSS Modules but can be used if PostCSS or similar is configured. For plain CSS Modules, use separate classes or global styles. */
+  /* Assuming plain CSS modules, this will target a global label if not careful. */
+  /* Let's make it specific: .label */
   font-size: 15px;
 }
 
-.label { /* More specific class for the label text itself */
-    font-size: 15px;
-    display: block; /* Good practice for labels */
-    margin-bottom: 4px; /* Spacing between label and field */
+.label {
+  /* More specific class for the label text itself */
+  font-size: 15px;
+  display: block; /* Good practice for labels */
+  margin-bottom: 4px; /* Spacing between label and field */
 }
 
 .tpSpanRequired {

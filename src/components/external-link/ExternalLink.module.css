@@ -15,13 +15,15 @@
   opacity: 0.95;
 }
 
-.primary { /* Modifier for type */
+.primary {
+  /* Modifier for type */
   color: #fff;
   background-color: #0d6efd;
   border-color: #0d6efd;
 }
 
-.success { /* Modifier for type */
+.success {
+  /* Modifier for type */
   color: #fff;
   background-color: #198754;
   border-color: #198754;

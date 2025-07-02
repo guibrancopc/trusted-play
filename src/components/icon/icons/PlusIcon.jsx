@@ -1,7 +1,5 @@
 import React from "react";
 
-import React from "react";
-
 export function PlusIcon({ className, style }) {
   return (
     <svg
