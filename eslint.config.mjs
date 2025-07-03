@@ -1,21 +1,18 @@
-import globals from "globals";
 import js from "@eslint/js";
+import globals from "globals";
 import pluginReact from "eslint-plugin-react";
 import pluginImport from "eslint-plugin-import";
-import pluginPrettierRecommended from "eslint-plugin-prettier/recommended";
+import pluginPrettierRecommended from "eslint-plugin-prettier/recommended"; // Added
 
 export default [
   {
-    // This can be the main shared configuration object
-    // Or a new dedicated object just for ignores at the top level of the array
     ignores: ["node_modules/", "dist/"],
   },
-  js.configs.recommended, // ESLint's recommended rules
-  pluginReact.configs.flat.recommended, // React plugin recommended flat config
-
+  js.configs.recommended,
+  pluginReact.configs.flat.recommended,
   // ESLint-plugin-import configuration
   {
-    files: ["**/*.{js,jsx,mjs,cjs}"], // Ensure this applies to relevant files
+    files: ["**/*.{js,jsx,mjs,cjs}"],
     plugins: {
       import: pluginImport,
     },
@@ -32,8 +29,7 @@ export default [
       },
     },
   },
-
-  // My Global/Override settings (AFTER plugin recommendations, BEFORE Prettier)
+  // My Global/Override settings
   {
     files: ["**/*.{js,jsx,mjs,cjs}"],
     languageOptions: {
@@ -55,10 +51,8 @@ export default [
       },
     },
     rules: {
-      "react/prop-types": "off", // Disable prop-types
-      // Add any other global rule overrides here
+      "react/prop-types": "off",
     },
   },
-
-  pluginPrettierRecommended, // Prettier config must be last
+  pluginPrettierRecommended, // Added as the last item
 ];
