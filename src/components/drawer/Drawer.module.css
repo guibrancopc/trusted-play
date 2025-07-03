@@ -7,10 +7,11 @@
   padding: 32px; /* Replaced var(--gutter) */
   top: 0;
   right: 0;
-  width: 350px; /* Replaced var(--width) */
+  width: 450px; /* Updated width */
   height: 100vh;
   background-color: #fff;
   z-index: 101;
+  box-sizing: border-box; /* Added box-sizing */
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); /* Added a subtle shadow for better separation */
   transition: transform 0.3s ease-out; /* Added for smooth show/hide */
   transform: translateX(0);
