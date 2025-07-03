@@ -1,0 +1,14 @@
+.tpInput {
+  height: 30px;
+  width: 100%;
+  border: solid 1px #acacac;
+  border-radius: 3px;
+  outline: none;
+  transition: box-shadow 0.3s; /* Comma was likely a typo, CSS transition property is space-separated */
+  padding: 2px 12px;
+  font-size: 16px;
+}
+
+.tpInput:focus {
+  box-shadow: 1px 1px 4px #ccc;
+}

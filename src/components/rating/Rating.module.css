@@ -1,0 +1,4 @@
+.tpRating {
+  margin-bottom: 16px;
+  line-height: 1; /* Prevents extra space if the library itself doesn't manage line height well */
+}

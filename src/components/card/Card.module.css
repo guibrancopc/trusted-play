@@ -1,0 +1,112 @@
+/* :root { --tp-card-width: 272px; } */ /* Handled by using 272px directly or via JS if dynamic */
+
+.tpCard {
+  display: inline-block;
+  position: relative;
+  transition: box-shadow 200ms;
+  box-shadow: 1px 1px 8px #ddd;
+  border-radius: 5px;
+  padding: 16px;
+  width: 272px; /* Replaced var(--tp-card-width) */
+  margin: 16px;
+  overflow: hidden;
+  min-height: 300px;
+}
+
+.tpCardFlipped {
+  /* Styles for when .tp-card--flipped is active */
+  /* For example, if it modified .tp-card directly, those would go here */
+}
+
+.tpCardFlipped .tpCardFrontSide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.tpCardFlipped .tpCardBackSide {
+  left: 16px;
+}
+
+.tpCard:hover {
+  box-shadow: 3px 3px 8px #ccc;
+}
+
+.tpCardImage {
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+.tpCardImage img {
+  height: 160px;
+  border-radius: 5px;
+  max-width: 100%;
+  min-width: 100%;
+}
+
+.tpCardDescription {
+  margin-bottom: 16px;
+}
+
+.tpCardNav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tpCardHeader {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tpCardHeaderOptionsButton {
+  padding: 8px 6px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+.tpCardFrontSide {
+  /* Base styles for front side if any, before flipping */
+}
+
+.tpCardBackSide {
+  position: absolute;
+  top: 16px;
+  left: 500px; /* Initial off-screen position */
+  width: 272px; /* Replaced var(--tp-card-width) */
+  transition: left 0.3s ease-out; /* Example transition */
+}
+
+.tpCardBackSide header {
+  /* Styles for header within back side */
+}
+
+.tpCardBackSide main {
+  padding: 32px 0;
+}
+
+.tpCardBackSide footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tpCardFrontSideRating {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+}
+
+/* Styling for Rating component if it's wrapped by .tp-card__front-side-rating > .tp-rating */
+/* This might need to target the actual class name from the Rating component's module if it uses CSS modules */
+.tpCardFrontSideRating > :global(.tp-rating) {
+  /* Using :global if .tp-rating is a global class from the Rating component */
+  background: rgba(0, 0, 0, 0.65);
+  border-radius: 5px;
+  padding: 2px 0 0 0;
+}
+
+/* Helper class for text alignment if needed elsewhere, or keep specific to this component's usage */
+.textAlignRenter {
+  text-align: center;
+}
